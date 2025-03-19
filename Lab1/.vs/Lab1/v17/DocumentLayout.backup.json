@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ASUS EXPERTBOOK\\Desktop\\Studia\\Bioinf 2023-24\\Semestr 4\\Programowanie_wizualne_final_wersion\\Lab1\\",
+  "WorkspaceRootPath": "C:\\Users\\jurin\\Documents\\Studia\\Semestr_4\\Programowanie_wizualne_final_version\\Lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EAB7795E-33B7-4BE6-852F-AEB2EF14DDE2}|Lab1\\Lab1.csproj|c:\\users\\asus expertbook\\desktop\\studia\\bioinf 2023-24\\semestr 4\\programowanie_wizualne_final_wersion\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAB7795E-33B7-4BE6-852F-AEB2EF14DDE2}|Lab1\\Lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EAB7795E-33B7-4BE6-852F-AEB2EF14DDE2}|Lab1\\Lab1.csproj|c:\\users\\jurin\\documents\\studia\\semestr_4\\programowanie_wizualne_final_version\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAB7795E-33B7-4BE6-852F-AEB2EF14DDE2}|Lab1\\Lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EAB7795E-33B7-4BE6-852F-AEB2EF14DDE2}|Lab1\\Lab1.csproj|c:\\users\\asus expertbook\\desktop\\studia\\bioinf 2023-24\\semestr 4\\programowanie_wizualne_final_wersion\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EAB7795E-33B7-4BE6-852F-AEB2EF14DDE2}|Lab1\\Lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EAB7795E-33B7-4BE6-852F-AEB2EF14DDE2}|Lab1\\Lab1.csproj|c:\\users\\jurin\\documents\\studia\\semestr_4\\programowanie_wizualne_final_version\\lab1\\lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB7795E-33B7-4BE6-852F-AEB2EF14DDE2}|Lab1\\Lab1.csproj|solutionrelative:lab1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,33 +37,33 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS EXPERTBOOK\\Desktop\\Studia\\Bioinf 2023-24\\Semestr 4\\Programowanie_wizualne_final_wersion\\Lab1\\Lab1\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\jurin\\Documents\\Studia\\Semestr_4\\Programowanie_wizualne_final_version\\Lab1\\Lab1\\Form1.cs",
               "RelativeDocumentMoniker": "Lab1\\Form1.cs",
-              "ToolTip": "C:\\Users\\ASUS EXPERTBOOK\\Desktop\\Studia\\Bioinf 2023-24\\Semestr 4\\Programowanie_wizualne_final_wersion\\Lab1\\Lab1\\Form1.cs",
+              "ToolTip": "C:\\Users\\jurin\\Documents\\Studia\\Semestr_4\\Programowanie_wizualne_final_version\\Lab1\\Lab1\\Form1.cs",
               "RelativeToolTip": "Lab1\\Form1.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAADwv6EAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAHMAAAAAAAAAAADwv5AAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T08:32:29.486Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Projekt]",
-              "DocumentMoniker": "C:\\Users\\ASUS EXPERTBOOK\\Desktop\\Studia\\Bioinf 2023-24\\Semestr 4\\Programowanie_wizualne_final_wersion\\Lab1\\Lab1\\Form1.cs",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jurin\\Documents\\Studia\\Semestr_4\\Programowanie_wizualne_final_version\\Lab1\\Lab1\\Form1.cs",
               "RelativeDocumentMoniker": "Lab1\\Form1.cs",
-              "ToolTip": "C:\\Users\\ASUS EXPERTBOOK\\Desktop\\Studia\\Bioinf 2023-24\\Semestr 4\\Programowanie_wizualne_final_wersion\\Lab1\\Lab1\\Form1.cs [Projekt]",
-              "RelativeToolTip": "Lab1\\Form1.cs [Projekt]",
+              "ToolTip": "C:\\Users\\jurin\\Documents\\Studia\\Semestr_4\\Programowanie_wizualne_final_version\\Lab1\\Lab1\\Form1.cs [Design]",
+              "RelativeToolTip": "Lab1\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T08:23:48.493Z",
-              "EditorCaption": " [Projekt]"
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
