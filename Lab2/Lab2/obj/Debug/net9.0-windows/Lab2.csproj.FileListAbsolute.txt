@@ -17,3 +17,22 @@ C:\Users\jurin\Documents\Studia\Semestr_4\Programowanie_wizualne_final_version\L
 C:\Users\jurin\Documents\Studia\Semestr_4\Programowanie_wizualne_final_version\Lab2\Lab2\obj\Debug\net9.0-windows\ref\Lab2.dll
 C:\Users\jurin\Documents\Studia\Semestr_4\Programowanie_wizualne_final_version\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.Komputer.resources
 C:\Users\jurin\Documents\Studia\Semestr_4\Programowanie_wizualne_final_version\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.Form3.resources
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\bin\Debug\net9.0-windows\Lab2.exe
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\bin\Debug\net9.0-windows\Lab2.deps.json
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\bin\Debug\net9.0-windows\Lab2.runtimeconfig.json
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\bin\Debug\net9.0-windows\Lab2.dll
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\bin\Debug\net9.0-windows\Lab2.pdb
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.Form1.resources
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.Komputer.resources
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.Form3.resources
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.csproj.GenerateResource.cache
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.AssemblyInfoInputs.cache
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.AssemblyInfo.cs
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.sourcelink.json
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.dll
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\refint\Lab2.dll
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.pdb
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\Lab2.genruntimeconfig.cache
+C:\Users\ASUS EXPERTBOOK\Desktop\Studia\Bioinf 2023-24\Semestr 4\Programowanie_wizualne_final_wersion\Lab2\Lab2\obj\Debug\net9.0-windows\ref\Lab2.dll
