@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Lab3
 {
     public partial class Form1 : Form
@@ -22,6 +24,70 @@ namespace Lab3
             dataGridView1.Rows.Add(ID, imie, nazwisko, wiek, stanowisko);
         }
 
+        private void ExportToCSV(DataGridView dataGridView, string filePath)
+        {
+            try
+            {
+                string csvContent = string.Join(";",
+                    dataGridView.Columns.Cast<DataGridViewColumn>()
+                    .Select(column => column.HeaderText)) + Environment.NewLine;
+
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        csvContent += string.Join(";",
+                            row.Cells.Cast<DataGridViewCell>()
+                            .Select(cell => cell.Value?.ToString() ?? "")) + Environment.NewLine;
+                    }
+                }
+
+                File.WriteAllText(filePath, csvContent, Encoding.UTF8);
+                MessageBox.Show("Plik zosta³ pomyœlnie wyeksportowany!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Wyst¹pi³ b³¹d podczas eksportu: {ex.Message}");
+            }
+        }
+
+        private void LoadCSVToDataGridView(string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Plik CSV nie istnieje.", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                string[] lines = File.ReadAllLines(filePath);
+
+                dataGridView1.Rows.Clear();
+                ID = 1;
+
+                for (int i = 1; i < lines.Length; i++)
+                {
+                    string[] values = lines[i].Split(';');
+                    if (values.Length == dataGridView1.Columns.Count)
+                    {
+                        dataGridView1.Rows.Add(values);
+                        // Aktualizacja licznika ID
+                        if (int.TryParse(values[0], out int currentId))
+                        {
+                            ID = Math.Max(ID, currentId + 1);
+                        }
+                    }
+                }
+
+                MessageBox.Show("Dane zosta³y wczytane pomyœlnie!", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Wyst¹pi³ b³¹d podczas wczytywania pliku: {ex.Message}", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -36,17 +102,43 @@ namespace Lab3
 
         private void button_usun_Click(object sender, EventArgs e)
         {
-
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                MessageBox.Show("Pracownik zosta³ usuniêty.");
+            }
+            else
+            {
+                MessageBox.Show("Proszê zaznaczyæ pracownika do usuniêcia!");
+            }
         }
 
         private void button_odczyt_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Pliki CSV (*.csv)|*.csv|Wszystkie pliki (*.*)|*.*";
+            openFileDialog.Title = "Wybierz plik CSV do wczytania";
+            openFileDialog.ShowDialog();
 
+            if (openFileDialog.FileName != "")
+            {
+                LoadCSVToDataGridView(openFileDialog.FileName);
+            }
         }
 
         private void button_zapis_Click(object sender, EventArgs e)
         {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Pliki CSV (*.csv)|*.csv|Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*";
+                saveFileDialog.FilterIndex = 1;
+                saveFileDialog.DefaultExt = "csv";
 
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExportToCSV(dataGridView1, saveFileDialog.FileName);
+                }
+            }
         }
     }
 }
