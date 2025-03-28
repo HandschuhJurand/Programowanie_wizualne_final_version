@@ -30,15 +30,14 @@
         {
             Load = new Button();
             pictureBox1 = new PictureBox();
-            only_green = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Load
             // 
-            Load.Location = new Point(38, 566);
+            Load.Location = new Point(23, 545);
             Load.Name = "Load";
-            Load.Size = new Size(112, 34);
+            Load.Size = new Size(167, 55);
             Load.TabIndex = 0;
             Load.Text = "Load";
             Load.UseVisualStyleBackColor = true;
@@ -53,35 +52,23 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // only_green
-            // 
-            only_green.BackColor = Color.FromArgb(192, 255, 192);
-            only_green.Location = new Point(12, 360);
-            only_green.Name = "only_green";
-            only_green.Size = new Size(163, 65);
-            only_green.TabIndex = 2;
-            only_green.Text = "OnlyGreen";
-            only_green.UseVisualStyleBackColor = false;
-            only_green.Click += only_green_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1253, 639);
-            Controls.Add(only_green);
             Controls.Add(pictureBox1);
             Controls.Add(Load);
             Name = "Form1";
             Text = "Edytor zdjec";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button Load;
         private PictureBox pictureBox1;
-        private Button only_green;
     }
 }
