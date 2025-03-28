@@ -26,5 +26,33 @@ namespace Lab4
         {
 
         }
+
+        private void only_green_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image == null) return;
+
+            Bitmap originalBitmap = new Bitmap(pictureBox1.Image);
+            Bitmap newBitmap = new Bitmap(originalBitmap.Width, originalBitmap.Height);
+
+            for (int x = 0; x < originalBitmap.Width; x++)
+            {
+                for (int y = 0; y < originalBitmap.Height; y++)
+                {
+                    Color pixel = originalBitmap.GetPixel(x, y);
+
+                    if (pixel.G > pixel.R && pixel.G > pixel.B)
+                    {
+                        newBitmap.SetPixel(x, y, pixel);
+                    }
+                    else
+                    {
+                        newBitmap.SetPixel(x, y, Color.Black);
+                    }
+                }
+            }
+
+            pictureBox1.Image = newBitmap;
+            originalBitmap.Dispose();
+        }
     }
 }
