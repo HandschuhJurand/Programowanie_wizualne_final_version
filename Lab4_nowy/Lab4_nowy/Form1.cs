@@ -28,6 +28,35 @@ namespace Lab4_nowy
             }
         }
 
+        private void button_only_green_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image == null) return;
+
+            Bitmap orginalny = new Bitmap(pictureBox1.Image);
+            Bitmap zielony = new Bitmap(orginalny.Width, orginalny.Height);
+
+            for (int x = 0; x < orginalny.Width; x++)
+            {
+                for (int y = 0; y < orginalny.Height; y++)
+                {
+                    Color pixel = orginalny.GetPixel(x, y);
+
+                    // Sprawdzamy czy piksel jest bardziej zielony ni¿ czerwony i niebieski
+                    if (pixel.G > pixel.R && pixel.G > pixel.B)
+                    {
+                        zielony.SetPixel(x, y, pixel); // Zachowujemy oryginalny kolor
+                    }
+                    else
+                    {
+                        zielony.SetPixel(x, y, Color.Black); // Ustawiamy czarny kolor
+                    }
+                }
+            }
+
+            pictureBox1.Image = zielony;
+            orginalny.Dispose();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
