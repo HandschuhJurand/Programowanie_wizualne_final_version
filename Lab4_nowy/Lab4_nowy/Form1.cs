@@ -1,4 +1,4 @@
-namespace Lab4
+namespace Lab4_nowy
 {
     public partial class Form1 : Form
     {
@@ -7,7 +7,12 @@ namespace Lab4
             InitializeComponent();
         }
 
-        private void Load_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_load_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Pliki graficzne |*.jpg; *.jpeg; *.png; *.bmp|Wszystkie pliki (*.*)|*.*";
@@ -20,16 +25,6 @@ namespace Lab4
                 pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                 pictureBox1.Image = bitmapa;
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

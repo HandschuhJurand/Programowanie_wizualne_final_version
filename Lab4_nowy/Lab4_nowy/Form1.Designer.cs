@@ -1,4 +1,4 @@
-﻿namespace Lab4
+﻿namespace Lab4_nowy
 {
     partial class Form1
     {
@@ -28,47 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Load = new Button();
             pictureBox1 = new PictureBox();
+            button_load = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // Load
-            // 
-            Load.Location = new Point(38, 566);
-            Load.Name = "Load";
-            Load.Size = new Size(112, 34);
-            Load.TabIndex = 0;
-            Load.Text = "Load";
-            Load.UseVisualStyleBackColor = true;
-            Load.Click += Load_Click;
-            // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(196, 17);
+            pictureBox1.Location = new Point(217, 28);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(989, 583);
-            pictureBox1.TabIndex = 1;
+            pictureBox1.Size = new Size(879, 587);
+            pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
+            // 
+            // button_load
+            // 
+            button_load.Location = new Point(12, 554);
+            button_load.Name = "button_load";
+            button_load.Size = new Size(184, 61);
+            button_load.TabIndex = 1;
+            button_load.Text = "Load";
+            button_load.UseVisualStyleBackColor = true;
+            button_load.Click += button_load_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1253, 639);
+            ClientSize = new Size(1108, 661);
+            Controls.Add(button_load);
             Controls.Add(pictureBox1);
-            Controls.Add(Load);
             Name = "Form1";
             Text = "Edytor zdjec";
-            Load += this.Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button Load;
         private PictureBox pictureBox1;
+        private Button button_load;
     }
 }
