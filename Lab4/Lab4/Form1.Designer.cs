@@ -35,9 +35,9 @@
             // 
             // Load
             // 
-            Load.Location = new Point(38, 566);
+            Load.Location = new Point(23, 545);
             Load.Name = "Load";
-            Load.Size = new Size(112, 34);
+            Load.Size = new Size(167, 55);
             Load.TabIndex = 0;
             Load.Text = "Load";
             Load.UseVisualStyleBackColor = true;
@@ -64,6 +64,7 @@
             Load += this.Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
