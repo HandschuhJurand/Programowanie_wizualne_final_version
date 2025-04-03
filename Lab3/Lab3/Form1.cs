@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.Json;
 
 namespace Lab3
 {
@@ -43,11 +44,11 @@ namespace Lab3
                 }
 
                 File.WriteAllText(filePath, csvContent, Encoding.UTF8);
-                MessageBox.Show("Plik zosta³ pomyœlnie wyeksportowany!");
+                MessageBox.Show("Plik zostaÅ‚ pomyÅ›lnie wyeksportowany!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Wyst¹pi³ b³¹d podczas eksportu: {ex.Message}");
+                MessageBox.Show($"WystÄ…piÅ‚ bÅ‚Ä…d podczas eksportu: {ex.Message}");
             }
         }
 
@@ -55,7 +56,7 @@ namespace Lab3
         {
             if (!File.Exists(filePath))
             {
-                MessageBox.Show("Plik CSV nie istnieje.", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Plik CSV nie istnieje.", "BÅ‚Ä…d", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -80,11 +81,11 @@ namespace Lab3
                     }
                 }
 
-                MessageBox.Show("Dane zosta³y wczytane pomyœlnie!", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Dane zostaÅ‚y wczytane pomyÅ›lnie!", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Wyst¹pi³ b³¹d podczas wczytywania pliku: {ex.Message}", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"WystÄ…piÅ‚ bÅ‚Ä…d podczas wczytywania pliku: {ex.Message}", "BÅ‚Ä…d", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -105,11 +106,11 @@ namespace Lab3
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-                MessageBox.Show("Pracownik zosta³ usuniêty.");
+                MessageBox.Show("Pracownik zostaÅ‚ usuniÄ™ty.");
             }
             else
             {
-                MessageBox.Show("Proszê zaznaczyæ pracownika do usuniêcia!");
+                MessageBox.Show("ProszÄ™ zaznaczyÄ‡ pracownika do usuniÄ™cia!");
             }
         }
 
@@ -140,5 +141,11 @@ namespace Lab3
                 }
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

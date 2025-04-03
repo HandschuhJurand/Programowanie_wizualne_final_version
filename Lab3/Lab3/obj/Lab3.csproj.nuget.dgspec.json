@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jurin\\Documents\\Studia\\Semestr_4\\Programowanie_wizualne_final_version\\Lab3\\Lab3\\Lab3.csproj": {}
+    "C:\\Users\\ASUS EXPERTBOOK\\Desktop\\Studia\\Bioinf 2023-24\\Semestr 4\\Programowanie_wizualne_final_wersion\\Lab3\\Lab3\\Lab3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jurin\\Documents\\Studia\\Semestr_4\\Programowanie_wizualne_final_version\\Lab3\\Lab3\\Lab3.csproj": {
+    "C:\\Users\\ASUS EXPERTBOOK\\Desktop\\Studia\\Bioinf 2023-24\\Semestr 4\\Programowanie_wizualne_final_wersion\\Lab3\\Lab3\\Lab3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jurin\\Documents\\Studia\\Semestr_4\\Programowanie_wizualne_final_version\\Lab3\\Lab3\\Lab3.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS EXPERTBOOK\\Desktop\\Studia\\Bioinf 2023-24\\Semestr 4\\Programowanie_wizualne_final_wersion\\Lab3\\Lab3\\Lab3.csproj",
         "projectName": "Lab3",
-        "projectPath": "C:\\Users\\jurin\\Documents\\Studia\\Semestr_4\\Programowanie_wizualne_final_version\\Lab3\\Lab3\\Lab3.csproj",
-        "packagesPath": "C:\\Users\\jurin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jurin\\Documents\\Studia\\Semestr_4\\Programowanie_wizualne_final_version\\Lab3\\Lab3\\obj\\",
+        "projectPath": "C:\\Users\\ASUS EXPERTBOOK\\Desktop\\Studia\\Bioinf 2023-24\\Semestr 4\\Programowanie_wizualne_final_wersion\\Lab3\\Lab3\\Lab3.csproj",
+        "packagesPath": "C:\\Users\\ASUS EXPERTBOOK\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS EXPERTBOOK\\Desktop\\Studia\\Bioinf 2023-24\\Semestr 4\\Programowanie_wizualne_final_wersion\\Lab3\\Lab3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jurin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS EXPERTBOOK\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
