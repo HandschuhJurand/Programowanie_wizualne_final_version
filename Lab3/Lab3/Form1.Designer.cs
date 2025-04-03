@@ -89,6 +89,24 @@
             button_odczyt.UseVisualStyleBackColor = true;
             button_odczyt.Click += button_odczyt_Click;
             // 
+            // button_JSON
+            // 
+            button_JSON.Location = new Point(59, 535);
+            button_JSON.Name = "button_JSON";
+            button_JSON.Size = new Size(150, 42);
+            button_JSON.TabIndex = 1;
+            button_JSON.Text = "Zapis JSON";
+            button_JSON.Click += button_JSON_Click_1;
+            // 
+            // button_odczytJSON
+            // 
+            button_odczytJSON.Location = new Point(319, 535);
+            button_odczytJSON.Name = "button_odczytJSON";
+            button_odczytJSON.Size = new Size(150, 42);
+            button_odczytJSON.TabIndex = 0;
+            button_odczytJSON.Text = "Odczyt JSON";
+            button_odczytJSON.Click += button_odczytJSON_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);

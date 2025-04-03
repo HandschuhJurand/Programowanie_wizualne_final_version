@@ -147,5 +147,97 @@ namespace Lab3
 
         }
 
+        private void ExportToJSON(string filePath)
+        {
+            try
+            {
+                var pracownicy = new List<Pracownik>();
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        pracownicy.Add(new Pracownik
+                        {
+                            ID = Convert.ToInt32(row.Cells["ID"].Value),
+                            Imie = row.Cells["Imie"].Value?.ToString(),
+                            Nazwisko = row.Cells["Nazwisko"].Value?.ToString(),
+                            Wiek = Convert.ToInt32(row.Cells["Wiek"].Value),
+                            Stanowisko = row.Cells["Stanowisko"].Value?.ToString()
+                        });
+                    }
+                }
+
+                string jsonString = JsonSerializer.Serialize(pracownicy, new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                });
+                File.WriteAllText(filePath, jsonString);
+                MessageBox.Show("Dane zostały wyeksportowane do pliku JSON!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Wystąpił błąd podczas eksportu do JSON: {ex.Message}");
+            }
+        }
+
+        private void LoadJSONFromFile(string filePath)
+        {
+            try
+            {
+                string jsonString = File.ReadAllText(filePath);
+                var pracownicy = JsonSerializer.Deserialize<List<Pracownik>>(jsonString);
+
+                dataGridView1.Rows.Clear();
+                ID = 1;
+
+                foreach (var pracownik in pracownicy)
+                {
+                    dataGridView1.Rows.Add(
+                        pracownik.ID,
+                        pracownik.Imie,
+                        pracownik.Nazwisko,
+                        pracownik.Wiek,
+                        pracownik.Stanowisko
+                    );
+                    ID = Math.Max(ID, pracownik.ID + 1);
+                }
+
+                MessageBox.Show("Dane zostały wczytane z pliku JSON!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Wystąpił błąd podczas wczytywania pliku JSON: {ex.Message}");
+            }
+        }
+
+        private void button_odczytJSON_Click_1(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Pliki JSON (*.json)|*.json|Wszystkie pliki (*.*)|*.*";
+                openFileDialog.Title = "Wybierz plik JSON do wczytania";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    LoadJSONFromFile(openFileDialog.FileName);
+                }
+            }
+        }
+
+        private void button_JSON_Click_1(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Pliki JSON (*.json)|*.json|Wszystkie pliki (*.*)|*.*";
+                saveFileDialog.FilterIndex = 1;
+                saveFileDialog.DefaultExt = "json";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExportToJSON(saveFileDialog.FileName);
+                }
+            }
+        }
     }
 }
