@@ -1,0 +1,23 @@
+[
+  {
+    "ID": 1,
+    "Imie": "Jan",
+    "Nazwisko": "Nowak",
+    "Wiek": 45,
+    "Stanowisko": "Dyrektor"
+  },
+  {
+    "ID": 2,
+    "Imie": "Szymon",
+    "Nazwisko": "Laskowik",
+    "Wiek": 22,
+    "Stanowisko": "Magazynier"
+  },
+  {
+    "ID": 3,
+    "Imie": "Ala",
+    "Nazwisko": "Aliska",
+    "Wiek": 57,
+    "Stanowisko": "Sprz\u0105tacz"
+  }
+]

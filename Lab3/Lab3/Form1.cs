@@ -30,16 +30,14 @@ namespace Lab3
             try
             {
                 string csvContent = string.Join(";",
-                    dataGridView.Columns.Cast<DataGridViewColumn>()
-                    .Select(column => column.HeaderText)) + Environment.NewLine;
+                    dataGridView.Columns.Cast<DataGridViewColumn>().Select(column => column.HeaderText)) + Environment.NewLine;
 
                 foreach (DataGridViewRow row in dataGridView.Rows)
                 {
                     if (!row.IsNewRow)
                     {
                         csvContent += string.Join(";",
-                            row.Cells.Cast<DataGridViewCell>()
-                            .Select(cell => cell.Value?.ToString() ?? "")) + Environment.NewLine;
+                            row.Cells.Cast<DataGridViewCell>().Select(cell => cell.Value?.ToString() ?? "")) + Environment.NewLine;
                     }
                 }
 
@@ -160,24 +158,24 @@ namespace Lab3
                         pracownicy.Add(new Pracownik
                         {
                             ID = Convert.ToInt32(row.Cells["ID"].Value),
-                            Imie = row.Cells["Imie"].Value?.ToString(),
-                            Nazwisko = row.Cells["Nazwisko"].Value?.ToString(),
+                            Imie = row.Cells["Imie"].Value.ToString(),
+                            Nazwisko = row.Cells["Nazwisko"].Value.ToString(),
                             Wiek = Convert.ToInt32(row.Cells["Wiek"].Value),
-                            Stanowisko = row.Cells["Stanowisko"].Value?.ToString()
+                            Stanowisko = row.Cells["Stanowisko"].Value.ToString()
                         });
                     }
-                }
+                }   
 
                 string jsonString = JsonSerializer.Serialize(pracownicy, new JsonSerializerOptions
                 {
                     WriteIndented = true
                 });
                 File.WriteAllText(filePath, jsonString);
-                MessageBox.Show("Dane zostały wyeksportowane do pliku JSON!");
+                MessageBox.Show("Dane zostały zapisane do pliku JSON");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Wystąpił błąd podczas eksportu do JSON: {ex.Message}");
+                MessageBox.Show("Wystąpił błąd podczas eksportu do JSON: {ex.Message}");
             }
         }
 
