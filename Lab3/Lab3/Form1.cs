@@ -1,5 +1,6 @@
 using System.Text;
 using System.Text.Json;
+using System.Xml.Serialization;
 
 namespace Lab3
 {
@@ -147,5 +148,105 @@ namespace Lab3
 
         }
 
+        private void ExportToXML(string file)
+        {
+            try
+            {
+                var pracownicy = new List<Pracownik>();
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        pracownicy.Add(new Pracownik
+                        {
+                            ID = Convert.ToInt32(row.Cells["ID"].Value),
+                            Imie = row.Cells["Imie"].Value.ToString(),
+                            Nazwisko = row.Cells["Nazwisko"].Value.ToString(),
+                            Wiek = Convert.ToInt32(row.Cells["Wiek"].Value),
+                            Stanowisko = row.Cells["Stanowisko"].Value.ToString()
+                        });
+                    }
+                }
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Pracownik>));
+
+                using (TextWriter writer = new StreamWriter(file))
+                {
+                    serializer.Serialize(writer, pracownicy);
+                }
+                MessageBox.Show("Dane zostały zapisane");
+            }
+            catch (Exception ex)
+            {
+                {
+                    MessageBox.Show("Wystapil blad podczas zapisywania danych: ", ex.Message);
+                }
+            }
+
+        }
+
+        private void LoadFromXML(string file)
+        {
+            try
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Pracownik>));
+
+                var pracownicy = new List<Pracownik>();
+
+                using (StreamReader reader = new StreamReader(file))
+                {
+                    pracownicy = (List<Pracownik>)serializer.Deserialize(reader);
+                }
+
+                dataGridView1.Rows.Clear();
+                ID = 1;
+
+                foreach (var pracownik in pracownicy)
+                {
+                    dataGridView1.Rows.Add(
+                        pracownik.ID,
+                        pracownik.Imie,
+                        pracownik.Nazwisko,
+                        pracownik.Wiek,
+                        pracownik.Stanowisko);
+                    ID = Math.Max(ID, pracownik.ID + 1);
+                }
+                MessageBox.Show("Dane zostaly wczytane");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Wystapil blad podczas wczytywania: ", ex.Message);
+            }
+        }
+
+        private void button_xml_zapis_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Pliki XML (*.xml)|*.xml|Wszystkie pliki (*.*)|*.*";
+                saveFileDialog.FilterIndex = 1;
+                saveFileDialog.DefaultExt = "xml";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExportToXML(saveFileDialog.FileName);
+
+                }
+            }
+        }
+
+        private void button_odczyt_xml_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Pliki XML (*.xml)|*.xml|Wszystkie pliki (*.*)|*.*";
+                openFileDialog.Title = "Wybierz plik XML do wczytania";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    LoadFromXML(openFileDialog.FileName);
+                }
+            }
+        }
     }
 }

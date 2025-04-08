@@ -33,8 +33,8 @@
             button_usun = new Button();
             button_zapis = new Button();
             button_odczyt = new Button();
-            button_JSON = new Button();
-            button_odczytJSON = new Button();
+            button_xml_zapis = new Button();
+            button_odczyt_xml = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -89,13 +89,33 @@
             button_odczyt.UseVisualStyleBackColor = true;
             button_odczyt.Click += button_odczyt_Click;
             // 
+            // button_xml_zapis
+            // 
+            button_xml_zapis.Location = new Point(59, 561);
+            button_xml_zapis.Name = "button_xml_zapis";
+            button_xml_zapis.Size = new Size(150, 42);
+            button_xml_zapis.TabIndex = 5;
+            button_xml_zapis.Text = "Zapis do XML";
+            button_xml_zapis.UseVisualStyleBackColor = true;
+            button_xml_zapis.Click += button_xml_zapis_Click;
+            // 
+            // button_odczyt_xml
+            // 
+            button_odczyt_xml.Location = new Point(319, 561);
+            button_odczyt_xml.Name = "button_odczyt_xml";
+            button_odczyt_xml.Size = new Size(150, 42);
+            button_odczyt_xml.TabIndex = 6;
+            button_odczyt_xml.Text = "Odczyt z XML";
+            button_odczyt_xml.UseVisualStyleBackColor = true;
+            button_odczyt_xml.Click += button_odczyt_xml_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1166, 633);
-            Controls.Add(button_odczytJSON);
-            Controls.Add(button_JSON);
+            Controls.Add(button_odczyt_xml);
+            Controls.Add(button_xml_zapis);
             Controls.Add(button_odczyt);
             Controls.Add(button_zapis);
             Controls.Add(button_usun);
@@ -115,7 +135,7 @@
         private Button button_usun;
         private Button button_zapis;
         private Button button_odczyt;
-        private Button button_JSON;
-        private Button button_odczytJSON;
+        private Button button_xml_zapis;
+        private Button button_odczyt_xml;
     }
 }
