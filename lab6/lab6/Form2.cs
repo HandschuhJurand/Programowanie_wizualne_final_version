@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +26,6 @@ namespace lab6
             this.parentForm = form1;
 
         }
-        //DODAC WARUNKI CZY WSZYSTKO ZMIESCI SIE NA PLANSZY dwa pola: liczba wszystkoch pol, liczba dostepnych (max - minumum z do wyboru)
         private void textBox_x_TextChanged(object sender, EventArgs e)
         {
             if (int.TryParse(textBox_x.Text, out int xTemp))
@@ -50,7 +49,27 @@ namespace lab6
 
         private void button_ok_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBox_x.Text) || string.IsNullOrEmpty(textBox_y.Text) ||
+            string.IsNullOrEmpty(textBox_dydelfy.Text) || string.IsNullOrEmpty(textBox_krokodyle.Text) ||
+            string.IsNullOrEmpty(textBox_szopy.Text) || string.IsNullOrEmpty(textBox_czas.Text))
+            {
+                MessageBox.Show("Wszystkie pola muszą być wypełnione!");
+                return;
 
+            }
+
+            int calkowita_liczba_pol = x * y;
+            int potrzebne_pola = dydelfy + krokodyle + szopy;
+
+            if (potrzebne_pola > calkowita_liczba_pol)
+            {
+                MessageBox.Show($"Za mało miejsca na planszy! Dostępne pola: {calkowita_liczba_pol}, Potrzebne pola: {potrzebne_pola}");
+                return;
+            }
+
+            parentForm.AktualizacjaParametrow(x, y, dydelfy, krokodyle, szopy, czas);
+            this.Close();
+            parentForm.Show();
         }
 
         private void button_anuluj_Click(object sender, EventArgs e)
@@ -150,7 +169,23 @@ namespace lab6
 
         private void textBox_czas_TextChanged(object sender, EventArgs e)
         {
-
+            if (int.TryParse(textBox_czas.Text, out int czasTemp))
+            {
+                if (czasTemp >= 10 && czasTemp <= 60)
+                {
+                    czas = czasTemp;
+                }
+                else
+                {
+                    MessageBox.Show("Podaj poprawny czas (10-60 sekund)!");
+                    textBox_czas.Text = "";
+                }
+            }
+            else if (!string.IsNullOrEmpty(textBox_czas.Text))
+            {
+                MessageBox.Show("Proszę podać liczbę całkowitą!");
+                textBox_czas.Text = "";
+            }
         }
     }
 }
