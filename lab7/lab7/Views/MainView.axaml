@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:lab7.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="lab7.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+
+	<StackPanel>
+		<Border Margin="5" CornerRadius="10" Background="LightBlue">
+			<TextBlock Margin="5"
+                       FontSize="24"
+                       HorizontalAlignment="Center"
+                       Text="Sekwencer DNA">
+			</TextBlock>
+		</Border>
+
+		<Label Grid.Row="0" Grid.Column="0" Margin="10" HorizontalAlignment="Center">Sekwencja</Label>
+		<TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Text="" Width="1000" HorizontalAlignment="Center" Name="Wczytana_sekwencja"/>
+
+		<Button HorizontalAlignment="Center" Click="Button_on_click">Analizuj sekwencje</Button>
+
+		<TextBox Name="Wynik"></TextBox>
+	</StackPanel>
+</UserControl>
