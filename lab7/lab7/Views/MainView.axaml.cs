@@ -1,34 +1,71 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Interactivity;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
 
 namespace lab7.Views;
 
 public partial class MainView : UserControl
 {
-    private string seq = "";
     public MainView()
     {
         InitializeComponent();
     }
-
-    private void Button_on_click(object? sender, RoutedEventArgs e)
+    private bool SprawdzNukleotyd(char c)
     {
-        Wynik.Text = seq;
+        return c == 'A' || c == 'C' || c == 'G' || c == 'T';
     }
-
-    private void Wczytana_sekwencja(object? sender, TextChangedEventArgs e)
+    private void Button_on_click(object sender, RoutedEventArgs e)
     {
-        if (sender is TextBox textBox)
+        var sekwencjaInput = this.FindControl<TextBox>("Wczytana_sekwencja");
+        var wynikiBox = this.FindControl<TextBox>("WynikiAnaliz");
+
+        if (sekwencjaInput == null || wynikiBox == null) return;
+
+        string sekwencja = sekwencjaInput.Text?.ToUpper() ?? "";
+
+        if (string.IsNullOrEmpty(sekwencja))
         {
-            seq = textBox.Text;
+            wynikiBox.Text = "Proszę wprowadzić sekwencję DNA.";
+            return;
         }
+
+        if (!sekwencja.All(SprawdzNukleotyd))
+        {
+            wynikiBox.Text = "Sekwencja może zawierać tylko litery A, C, G, T.";
+            return;
+        }
+
+        if (sekwencja.Length < 4)
+        {
+            wynikiBox.Text = "Sekwencja jest za krótka. Minimalna długość to 4 nukleotydy.";
+            return;
+        }
+
+        var wyniki = new Dictionary<string, int>();
+
+        for (int i = 0; i <= sekwencja.Length - 4; i++)
+        {
+            string podsekwencja = sekwencja.Substring(i, 4);
+            if (!wyniki.ContainsKey(podsekwencja))
+            {
+                wyniki[podsekwencja] = 0;
+            }
+            wyniki[podsekwencja]++;
+        }
+
+        var sb = new StringBuilder();
+        sb.AppendLine("Wyniki analizy sekwencji DNA:\n");
+        sb.AppendLine("Znalezione 4-nukleotydowe sekwencje:");
+
+        foreach (var wynik in wyniki.OrderByDescending(x => x.Value))
+        {
+            sb.AppendLine($"• {wynik.Key}: {wynik.Value} wystąpień");
+        }
+
+        wynikiBox.Text = sb.ToString();
     }
-
-    //DLA KAZDYCH 4 NUKLEOTYDOW, BIERZEMY PIERWSZE 4 I PATRZYMY CZY MAMY W LISCIE/SLOWNIKU ITD
-    private void Analiza(object? sender, RoutedEventArgs e)
-    {
-
-    }
-
 }
+

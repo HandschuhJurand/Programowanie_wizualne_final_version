@@ -27,6 +27,7 @@
 
 		<Button HorizontalAlignment="Center" Click="Button_on_click">Analizuj sekwencje</Button>
 
-		<TextBox Name="Wynik"></TextBox>
+		<TextBox Name="WynikiAnaliz" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" Height="300" Width="1000" Margin="0 10" HorizontalAlignment="Center"/>
+
 	</StackPanel>
 </UserControl>
