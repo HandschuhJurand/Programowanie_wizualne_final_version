@@ -1,0 +1,87 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:lab9.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="lab9.Views.MainView"
+             x:DataType="vm:MainViewModel">
+	<ScrollViewer>
+		<StackPanel Margin="20" Spacing="8">
+			<TextBlock Text="Wniosek o przeprowadzenie egzaminu komisjyjnego" HorizontalAlignment="Center" FontSize="25"/>
+			<Label FontSize="12">Data wypelnienia:</Label>
+			<TextBox Text="{Binding DataWypelnienia}" />
+			<Label FontSize="12">Numer albumu:</Label>
+			<TextBox Text="{Binding NumerAlbumu}" />
+			<Label FontSize="12">Imie i nazwisko:</Label>
+			<TextBox Text="{Binding NazwiskoImie}" />
+			<Label FontSize="12">Semestr, Rok:</Label>
+			<TextBox Text="{Binding SemestrRok}" />
+			<Label FontSize="12">Kierunek i stopien studiow:</Label>
+			<TextBox Text="{Binding KierunekStopien}" />
+			<Label FontSize="12">Przedmiot:</Label>
+			<TextBox Text="{Binding Przedmiot}" />
+			<Label FontSize="12">Punkty:</Label>
+			<TextBox Text="{Binding Punkty}" />
+			<Label FontSize="12">Prowadzacy:</Label>
+			<TextBox Text="{Binding Prowadzacy}" />
+			<Label FontSize="12">Uzasadnienie:</Label>
+			<TextBox Text="{Binding Uzasadnienie}" />
+			<Label FontSize="12">Data i podpis studenta:</Label>
+			<TextBox Text="{Binding DataPodpisStudenta}" />
+			<Label FontSize="12">Decyzja:</Label>
+			<TextBox Text="{Binding Decyzja}" />
+			<Label FontSize="15">Sklad komisji:</Label>
+			<Label FontSize="12">Komisja 1:</Label>
+			<TextBox Text="{Binding Komisja1}" />
+			<Label FontSize="12">Komisja 2:</Label>
+			<TextBox Text="{Binding Komisja2}" />
+			<Label FontSize="12">Komisja 3:</Label>
+			<TextBox Text="{Binding Komisja3}" />
+			<Label FontSize="12">Data decyzji:</Label>
+			<TextBox Text="{Binding DataDecyzji}" />
+			<StackPanel Orientation="Horizontal" Spacing="8" Margin="0,12,0,0">
+				<Button Content="Zapisz do bazy" Command="{Binding ZapiszCommand}" />
+				<Button Content="Pokaż wpisy" Command="{Binding PokazWpisyCommand}" />
+			</StackPanel>
+			<TextBlock Text="Poprzednie wpisy:" FontSize="20" Margin="0,16,0,0"/>
+			<ListBox ItemsSource="{Binding Wnioski}">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<StackPanel>
+							<TextBlock Text="{Binding NazwiskoImie}" FontWeight="Bold" />
+							<TextBlock Text="Numer albumu: " FontWeight="Bold" />
+							<TextBlock Text="{Binding NumerAlbumu}" />
+							<TextBlock Text="Data wypełnienia: " FontWeight="Bold" />
+							<TextBlock Text="{Binding DataWypelnienia}" />
+							<TextBlock Text="Semestr, rok: " FontWeight="Bold" />
+							<TextBlock Text="{Binding SemestrRok}"/>
+							<TextBlock Text="Kierunek i stopień: " FontWeight="Bold" />
+							<TextBlock Text="{Binding KierunekStopien}"/>
+							<TextBlock Text="Przedmiot: " FontWeight="Bold" />
+							<TextBlock Text="{Binding Przedmiot}"/>
+							<TextBlock Text="Punkty: " FontWeight="Bold" />
+							<TextBlock Text="{Binding Punkty}" />
+							<TextBlock Text="Prowadzący: " FontWeight="Bold" />
+							<TextBlock Text="{Binding Prowadzacy}" />
+							<TextBlock Text="Uzasadnienie: " FontWeight="Bold" />
+							<TextBlock Text="{Binding Uzasadnienie}" />
+							<TextBlock Text="Data i podpis studenta: " FontWeight="Bold" />
+							<TextBlock Text="{Binding DataPodpisStudenta}" />
+							<TextBlock Text="Decyzja: " FontWeight="Bold" />
+							<TextBlock Text="{Binding Decyzja}" />
+							<TextBlock Text="Komisja 1: "  FontWeight="Bold" />
+							<TextBlock Text="{Binding Komisja1}" />
+							<TextBlock Text="Komisja 2: "  FontWeight="Bold" />
+							<TextBlock Text="{Binding Komisja2}" />
+							<TextBlock Text="Komisja 3: " FontWeight="Bold" />
+							<TextBlock Text="{Binding Komisja3}"/>
+							<TextBlock Text="Data decyzji: " FontWeight="Bold" />
+							<TextBlock Text="{Binding DataDecyzji}"/>
+						</StackPanel>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</StackPanel>
+	</ScrollViewer>
+</UserControl>
