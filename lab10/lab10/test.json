@@ -1,0 +1,22 @@
+﻿[
+  {
+    "nazwa": "AF013216.1 Myxococcus xanthus Dog (dog), isocitrate lyase (icl), Mls (mls), Ufo (ufo), fumarate hydratase (fhy), and proteosome major subunit (clpP) genes, complete cds; and acyl-CoA oxidase (aco) gene, partial cds",
+    "dlugosc": 15742,
+    "gc": 69.12717570829628,
+    "kodony": 5247,
+    "A": 2322,
+    "T": 2538,
+    "C": 5246,
+    "G": 5636
+  },
+  {
+    "nazwa": "KC879292.1 Panthera tigris isolate Tiger N NADH dehydrogenase subunit 6 (ND6) gene, partial cds; tRNA-Glu gene, complete sequence; and cytochrome b (cytb) gene, partial cds; mitochondrial",
+    "dlugosc": 1573,
+    "gc": 42.97520661157025,
+    "kodony": 524,
+    "A": 499,
+    "T": 398,
+    "C": 461,
+    "G": 215
+  }
+]
